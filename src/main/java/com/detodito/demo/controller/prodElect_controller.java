@@ -21,4 +21,10 @@ public class prodElect_controller {
         return productosElectronicoRepository.findAll();
     }
 
+    @PostMapping
+    public productosElectronico createProductoElectronico(@RequestBody productosElectronico productosElectronico) {
+        return productosElectronicoRepository.save(productosElectronico);
+    }
+    
+
 }
