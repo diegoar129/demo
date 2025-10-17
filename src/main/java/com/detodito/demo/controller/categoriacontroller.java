@@ -3,20 +3,19 @@ package com.detodito.demo.controller;
 import com.detodito.demo.model.Categoria;
 import com.detodito.demo.repository.CategoriaRepository;
 
-import jakarta.persistence.Entity;
 
-import org.springframework.http.ResponseEntity;
+
+
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Entity
 @RestController
 @RequestMapping("/api/categorias")
-public class categoria_controller {
+public class categoriacontroller {
     private final CategoriaRepository categoriaRepository;
 
-    public categoria_controller(CategoriaRepository categoriaRepository) {
+    public categoriacontroller(CategoriaRepository categoriaRepository) {
         this.categoriaRepository = categoriaRepository;
     }
 

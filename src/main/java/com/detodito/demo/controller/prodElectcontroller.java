@@ -2,17 +2,17 @@ package com.detodito.demo.controller;
 
 import com.detodito.demo.model.productosElectronico;
 import com.detodito.demo.repository.productosElectronicoRepository;
-import org.springframework.http.ResponseEntity;
+
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/api/productosElectronico")
-public class prodElect_controller {
+public class prodElectcontroller {
     private final productosElectronicoRepository productosElectronicoRepository;
 
-    public prodElect_controller(productosElectronicoRepository productosElectronicoRepository) {
+    public prodElectcontroller(productosElectronicoRepository productosElectronicoRepository) {
         this.productosElectronicoRepository = productosElectronicoRepository;
     }
 
@@ -22,9 +22,8 @@ public class prodElect_controller {
     }
 
     @PostMapping
-    public productosElectronico createProductoElectronico(@RequestBody productosElectronico productosElectronico) {
-        return productosElectronicoRepository.save(productosElectronico);
+    public productosElectronico createProductoElectronico(@RequestBody productosElectronico producto) {
+        return productosElectronicoRepository.save(producto);
     }
-    
 
 }
